@@ -1,0 +1,49 @@
+// SearchInput
+// -------------------------
+
+.searchInput
+{
+    input[type=text]
+    {
+        height: 34px;
+        padding: 6px 12px;
+        padding-right: 32px;
+
+        border-right: 0;
+    }
+
+    .btn-default
+    {
+        border: 1px solid transparent;
+    }
+}
+
+.searchInput__close-icon
+{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+
+    // .form-control has z-index of 2
+    z-index: @zIndex-3;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    margin-top: -8px;
+    margin-right: 45px;
+
+    opacity: .2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+
+    filter: alpha(opacity=20);
+}
+
+
+.searchInput__btn
+{
+    color: #fff;
+    background-color: #eea821;
+}

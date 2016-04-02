@@ -1,0 +1,35 @@
+{
+  "name": "active-share-styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "prepublish": "npm run compile",
+    "precompile": "rm -rf dist && mkdir dist",
+    "compile": "lessc less/active.less dist/css/active.css",
+    "postcompile": "cp -r fonts dist/fonts"
+  },
+  "keywords": [],
+  "author": "Khalil Zhang <kandmforever@126.com> (http://starandtina.github.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "2.6.1",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starandtina/active-share-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/starandtina/active-share-styles/issues"
+  },
+  "homepage": "https://github.com/starandtina/active-share-styles#readme",
+  "description": ""
+}

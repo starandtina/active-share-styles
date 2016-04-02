@@ -1,0 +1,213 @@
+// Tooltip
+// -------------------------
+
+.tooltipped {
+  position: relative;
+}
+
+// This is the tooltip bubble
+.tooltipped::after {
+  position: absolute;
+  z-index: @zIndex-8;
+  display: none;
+  padding: 5px 8px;
+  font: normal normal 11px/1.5;
+  color: @textColor-white--toolip;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: @backgroundColor-blackWithOpacity-tooltip;
+  border-radius: 3px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+// This is the tooltip arrow
+.tooltipped::before {
+  position: absolute;
+  z-index: @zIndex-9;
+  display: none;
+  width: 0;
+  height: 0;
+  color: @backgroundColor-blackWithOpacity-tooltip;
+  pointer-events: none;
+  content: "";
+  border: 5px solid transparent;
+}
+
+// This will indicate when we will activate the tooltip
+.tooltipped:hover,
+.tooltipped:active,
+.tooltipped:focus {
+  &::before,
+  &::after {
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+.tooltipped:hover
+{
+    text-decoration: none;
+}
+
+
+.tooltipped-multiline:hover,
+.tooltipped-multiline:active,
+.tooltipped-multiline:focus {
+  &::after {
+    display: table-cell;
+  }
+}
+
+// Tooltipped south
+.tooltipped-s,
+.tooltipped-se,
+.tooltipped-sw {
+  &::after {
+    top: 100%;
+    right: 50%;
+    margin-top: 5px;
+  }
+
+  &::before {
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    margin-right: -5px;
+    border-bottom-color: @backgroundColor-blackWithOpacity-tooltip;
+  }
+}
+
+.tooltipped-se {
+  &::after {
+    right: auto;
+    left: 50%;
+    margin-left: -15px;
+  }
+}
+
+.tooltipped-sw:after {
+  margin-right: -15px;
+}
+
+// Tooltips above the object
+.tooltipped-n,
+.tooltipped-ne,
+.tooltipped-nw {
+  &::after {
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 5px;
+  }
+
+  &::before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -5px;
+    border-top-color: @backgroundColor-blackWithOpacity-tooltip;
+  }
+}
+
+.tooltipped-ne {
+  &::after {
+    right: auto;
+    left: 50%;
+    margin-left: -15px;
+  }
+}
+
+.tooltipped-nw:after {
+  margin-right: -15px;
+}
+
+// Move the tooltip body to the center of the object.
+.tooltipped-s:after,
+.tooltipped-n:after {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+// Tooltipped to the left
+.tooltipped-w {
+  &::after {
+    right: 100%;
+    bottom: 50%;
+    margin-right: 5px;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+
+  &::before {
+    top: 50%;
+    bottom: 50%;
+    left: -5px;
+    margin-top: -5px;
+    border-left-color: @backgroundColor-blackWithOpacity-tooltip;
+  }
+}
+
+// tooltipped to the right
+.tooltipped-e {
+  &::after {
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+
+  &::before {
+    top: 50%;
+    right: -5px;
+    bottom: 50%;
+    margin-top: -5px;
+    border-right-color: @backgroundColor-blackWithOpacity-tooltip;
+  }
+}
+
+// Multiline tooltips
+//
+// `.tooltipped-multiline` Add this class when you have long content.
+// The downside is you cannot preformat the text with newlines and `[w,e]`
+// are always `@multilineMaxWidth---tooltip` wide.
+.tooltipped-multiline {
+  &::after {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: @multilineMaxWidth---tooltip;
+    word-break: break-word;
+    word-wrap: normal;
+    white-space: pre-line;
+    border-collapse: separate;
+  }
+
+  &.tooltipped-s:after,
+  &.tooltipped-n:after {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  &.tooltipped-w:after,
+  &.tooltipped-e:after {
+    right: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+{
+    // >= IE10 rule sets go here
+    .tooltipped-multiline::after 
+    {
+        width: @multilineMaxWidth---tooltip;
+    }
+}

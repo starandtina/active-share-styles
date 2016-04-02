@@ -1,0 +1,52 @@
+// NavTab
+// -------------------------
+
+.navTab
+{
+    line-height: 28px;
+
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    color: #999;
+    background-color: #e5e5e5;
+}
+
+.navTab__li
+{
+    position: relative;
+
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: #228fca;
+}
+
+.navTab__li.active
+{
+    color: #fff;
+    background-color: #eea821;
+}
+
+.navTab__li.active::after
+{
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+
+    content: ' ';
+
+    border-top: 6px solid #eea821;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}

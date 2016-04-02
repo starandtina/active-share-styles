@@ -1,0 +1,149 @@
+[data-render="active.fnd.aui.components.CalendarInput"] {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+  
+  
+  &.form-control.active-fnd-aui-components-BaseInput-long {
+    border: 1px solid @gray-lighter;
+    border-radius:4px;
+    display:block;
+    height:auto;
+    width:245px;
+  }
+
+  table {
+
+    text-align: center;
+    color: #666666;
+    border:0px;
+    display:table;
+    width:100%;
+    
+    .header {
+      height: 35px;
+      background-color:@gray-lighter;
+      
+      th {
+        text-align: center;
+        vertical-align: middle;
+        font-size:14px;
+        text-transform:none;
+      }
+      
+      .previous {
+        display: inline-block;
+        width: 30px;
+        min-width: 7px;
+        height: 30px;
+        line-height: 35px;
+        min-height: 9px;
+        margin: 0 0 0 0;
+
+        &:before {
+          content:"\f053";
+          font-family:aui_icons;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .next {
+        display: inline-block;
+        width: 30px;
+        min-width: 7px;
+        height: 30px;
+        line-height: 35px;
+        min-height: 9px;
+        margin: 0 0 0 0;
+
+        &:after {
+          content:"\f054";
+          font-family:aui_icons;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .month,
+      .year {
+        font-weight:normal;
+        display: inline-block;
+        margin: 0 0 4px 0;
+        *margin: 0 0 6px 0;
+      }
+
+      
+      ul {
+        display: none;
+        & .nextYear {
+          display: none;
+        }
+
+        & .previousYear {
+          display: none;
+        }
+      }
+    }
+    
+    tr {
+      
+      &.dayNames {
+        color: @gray-base;
+        text-transform:uppercase;
+        
+        td {
+          font-size:12px;
+        }
+        
+      }
+      
+      &.days td {
+        border:0px;
+        border-top: 1px solid @gray-lighter;
+        
+        &:hover {
+          color: #fff;
+          background-color:@yellow-base;
+          border-radius:4px;
+          cursor: pointer;
+        }
+        
+        &.disabled {
+          visibility:hidden;
+        }
+        
+        &.selected {
+          
+          color: @yellow-base;
+          background-color: #666;
+          border-radius:4px;
+
+          &:hover {
+            color: #fff;
+            background-color: #009DDA;
+            cursor: pointer;
+          }
+          
+        }
+        
+      }
+      
+    }
+
+    td {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+    
+  }
+  
+}

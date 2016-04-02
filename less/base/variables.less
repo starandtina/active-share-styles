@@ -1,0 +1,98 @@
+// Variables
+// Syntax: <property>-<value>[--componentName]
+// -------------------------
+
+// Load fonts from this directory.
+@icon-font-path:          "../fonts/";
+// File name for all font files.
+@icon-font-name:          "aui_icons";
+// Element ID within SVG icon file.
+@icon-font-svg-id:        "aui_icons";
+
+@ProximaNovaLtSemibold-font-path:          "../fonts/";
+// File name for all ProximaNovaLtSemibold files.
+@ProximaNovaLtSemibold-font-name:          "ProximaNovaLtSemibold";
+// Element ID within SVG icon file.
+@ProximaNovaLtSemibold-font-svg-id:        "ProximaNovaLtSemibold";
+
+
+// Z Index
+// Nothing should be higher then @zIndex-9.
+// --------------------------------------------------
+
+@zIndex-1: 1;
+@zIndex-2: 2;
+@zIndex-3: 3;
+@zIndex-4: 4;
+@zIndex-5: 5;
+@zIndex-6: 6;
+@zIndex-7: 7;
+@zIndex-8: 8;
+@zIndex-9: 9;
+
+
+// Font
+// -------------------------
+
+@default-font-size: 14px;
+@default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-size-lg: 18px;
+
+// Colors
+// -------------------------
+
+@yellow-base: #EEA821;
+@yellow-lighter: #F4B951;
+@gray-lighter: #E9E9E9;
+@gray-base: #999;
+@gray-article: #F5F5F5;
+@notify: #D00A01;
+@error-color: #E65736;
+@error-background-color: #FEE6E0;
+@black-base: #222;
+
+// MQ
+// -------------------------
+
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+@grid-gutter-width:          30px;
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+
+// For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+
+//For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+
+@xs:                          ~"only screen and (max-width: @{screen-xs-max})";
+@sm:                          ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+
+// Tooltip Variables
+// -------------------------
+
+@multilineMaxWidth---tooltip: 250px;
+@backgroundColor-blackWithOpacity-tooltip: rgba(0, 0, 0, 0.8);
+@textColor-white--toolip: #fff;
+
+// Form
+// -------------------------
+
+@form-control-border-color: #ddd;
+@form-control-height: 32px;
+@input-height: 30px;

@@ -1,0 +1,88 @@
+// Checkbox
+// -------------------------
+
+input[type='checkbox']
+{
+    display: none;
+    /* IE8 will not have styled checkboxes and checkbox buttons */
+    display: inline\9;
+
+    padding: 5px 5px 0 20px\9;
+}
+
+.checkbox label {
+    word-wrap: break-word;
+    padding-left: 0;
+    display: inline;
+}
+
+.checkbox label:before
+{
+    display: inline-block;
+    display: none\9; /* IE8 will not have styled checkbox buttons */
+
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+
+    content: '';
+    cursor: pointer;
+    vertical-align: middle;
+
+    color: #f5f5f5;
+    border: 1px solid #999;
+    background-color: #f5f5f5;
+}
+
+.checkbox label:hover::before
+{
+    border-color: #333;
+}
+
+.has-error .checkbox label:before, .has-error .checkbox label:hover::before {
+  border-color: @error-color;
+  background-color: @error-background-color;
+}
+
+.checkbox input[type=checkbox]:checked + label:before
+{
+    font-family: 'aui_icons';
+    font-size: 12px;
+
+    content: '\f00c';
+    cursor: default;
+    text-align: center;
+
+    color: #f5f5f5;
+    border-color: #999;
+    background-color: #222;
+}
+
+.checkbox input[type=checkbox]:disabled + label:before
+{
+    cursor: not-allowed;
+
+    color: #f5f5f5;
+    border-color: #999;
+    background-color: #ccc;
+}
+
+.checkbox__input
+{
+    float: left;
+}
+
+.checkbox .checkbox__label
+{
+    display: block;
+    overflow: hidden;
+
+    display: inline\9;
+    max-width: none\9;
+}
+
+.checkbox .checkbox__label:before
+{
+    display: none;
+}

@@ -1,0 +1,109 @@
+// Radio
+// -------------------------
+
+input[type='radio']
+{
+    display: none;
+    /* IE8 will not have styled checkboxes and radio buttons */
+    display: inline\9;
+
+    padding: 5px 5px 0 20px\9;
+}
+
+.radio label
+{
+    padding-left: 0;
+    word-wrap: break-word;
+    max-width: none\9;
+}
+
+.radio label:before
+{
+    display: inline-block;
+    display: none\9; /* IE8 will not have styled radio buttons */
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    content: '';
+    vertical-align: middle;
+
+    color: #f5f5f5;
+    border: 1px solid #999;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+}
+
+.radio label:hover::before
+{
+    border-color: #333;
+}
+
+.has-error .radio label:before, .has-error .radio label:hover::before {
+  border-color: @error-color;
+  background-color: @error-background-color;
+}
+
+.radio label:active::before
+{
+    color: #fff;
+    background-color: #333;
+}
+
+.radio input[type=radio]:checked + label:before
+{
+    font-size: 30px;
+    line-height: 18px;
+
+    content: '\2022';
+    text-align: center;
+
+    color: #f5f5f5;
+    border-color: #999;
+    background-color: #222;
+}
+
+.radio input[type=radio]:disabled + label:before
+{
+    cursor: not-allowed;
+
+    color: #f5f5f5;
+    border-color: #999;
+    background-color: #ccc;
+}
+
+.radio__input
+{
+    float: left;
+}
+
+.radio .radio__label
+{
+    display: block;
+    overflow: hidden;
+
+    display: inline\9;
+    max-width: none\9;
+}
+
+.radio .radio__label:before
+{
+    display: none;
+}
+
+.radio input[type='radio'],
+.checkbox input[type='checkbox']
+{
+    position: inherit\9;
+}
+
+.radio-group {
+  .radio {
+    margin-bottom: 15px;
+  }
+
+  .radio:last-child {
+    margin-bottom: initial;
+  }
+}

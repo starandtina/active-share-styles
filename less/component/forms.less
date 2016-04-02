@@ -1,0 +1,46 @@
+.form-control {
+  box-shadow: none;
+  height: @form-control-height;
+  border: 1px solid @form-control-border-color;
+}
+
+.form-group > .validation {
+  float: left;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 7px;
+}
+
+@media (min-width: 768px) {
+  .form-group > .validation {
+    width: 33.33%;
+  }
+}
+
+.label-required:before {
+  content: "*";
+  font-size: 13px;
+  font-weight: normal;
+  color: #D00A01;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.form-group .readOnlyContent {
+  padding-top: 7px;
+}
+
+.required {
+  font-size: 13px;
+  font-weight: normal;
+  color: #D00A01;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.control-label {
+  font-weight: bold;
+}

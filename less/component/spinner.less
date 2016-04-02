@@ -1,0 +1,81 @@
+// Spinner
+// See http://lea.verou.me/2013/11/cleanest-css-spinner-ever/
+// -------------------------
+
+.spinner
+{
+    font-size: 12px;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: 5em;
+    height: 5em;
+    margin: 0 .5em;
+
+    -webkit-animation: spin 1s infinite steps(8);
+            animation: spin 1s infinite steps(8);
+    text-indent: 999em;
+}
+
+.spinner:before,
+.spinner:after,
+.spinner__inner:before,
+.spinner__inner:after
+{
+    position: absolute;
+    top: 0;
+    left: 2.25em; /* (container width - part width)/2  */
+
+    width: .5em;
+    height: 1.5em;
+
+    content: '';
+    -webkit-transform-origin: 50% 2.5em;
+            transform-origin: 50% 2.5em; /* container height / 2 */
+
+    border-radius: .2em;
+    background: #eee;
+    box-shadow: 0 3.5em #eee; /* container height - part height */
+}
+
+.spinner:before
+{
+    background: #555;
+}
+
+.spinner:after
+{
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+
+    background: #777;
+}
+
+.spinner__inner:before
+{
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+
+    background: #999;
+}
+
+.spinner__inner:after
+{
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+
+    background: #bbb;
+}
+
+.spinner--small
+{
+    font-size: 6px;
+}
+
+.spinner--large
+{
+    font-size: 24px;
+}

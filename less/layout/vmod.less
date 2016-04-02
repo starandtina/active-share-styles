@@ -1,0 +1,56 @@
+//
+// Layout classes
+// --------------------------------------------------
+@import "header.less";
+@import "footer.less";
+
+html,
+body 
+{
+    height: 100%;
+}
+
+.aw
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:        flex;
+
+    // 1. Avoid the IE 10-11 `min-height` bug.
+    // 2. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+    height: 100%;
+
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    .container
+    {   
+        /**
+         *
+         *  Set `flex-shrink` to `0` to prevent some browsers from
+         *  letting these items shrink to smaller than their content's default
+         *  minimum size. See http://bit.ly/1Mn35US for details.
+         *
+        **/
+   
+        -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+    }
+}
+
+.primary-section {
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+
+.secondary-section {
+    margin-bottom: 8px;
+}
+
+.page-footer {
+  margin: 60px 0 90px 0;
+}

@@ -1,0 +1,109 @@
+@dropdown-arrow-length: 6px;
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.select.dropdown-toggle {
+  padding-right: 12px + @form-control-height;
+}
+
+.select.dropdown-toggle > span.glyphicon.glyphicon-chevron-toggle {
+  display: block;
+  width: @form-control-height;
+  height: @form-control-height;
+  border: 1px solid @form-control-border-color;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #cccccc;
+}
+
+.has-error .select.dropdown-toggle > span.glyphicon.glyphicon-chevron-toggle {
+  border-color: @error-color;
+}
+
+.select.dropdown-toggle > span.glyphicon.glyphicon-chevron-toggle:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: @dropdown-arrow-length solid;
+  border-right: @dropdown-arrow-length solid transparent;
+  border-left: @dropdown-arrow-length solid transparent;
+  position: absolute;
+  top: (@form-control-height - @dropdown-arrow-length) / 2;
+  right: (@form-control-height - @dropdown-arrow-length * 2) / 2 - 1;
+  border-radius: 3px;
+}
+
+.btn-group.open .select.dropdown-toggle > span.glyphicon.glyphicon-chevron-toggle:after {
+  border-top: none;
+  border-right: @dropdown-arrow-length solid transparent;
+  border-left: @dropdown-arrow-length solid transparent;
+  border-bottom: @dropdown-arrow-length solid;
+}
+
+.select.dropdown-toggle > span.left-label {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+}
+
+.dropdown-menu {
+  max-height: 400px;
+  padding: 0px;
+  overflow-y: auto;
+  box-shadow: none;
+}
+
+.dropdown-menu > li > a {
+  padding: 5px 15px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: @yellow-lighter;
+}
+
+
+.mobile-select {
+  position: relative;
+}
+
+
+.mobile-select > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.mobile-select > span.glyphicon {
+  display: block;
+  width: @form-control-height;
+  height: @form-control-height;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.mobile-select > span.glyphicon:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: @dropdown-arrow-length solid;
+  border-right: @dropdown-arrow-length solid transparent;
+  border-left: @dropdown-arrow-length solid transparent;
+  position: absolute;
+  top: (@form-control-height - @dropdown-arrow-length) / 2;
+  right: (@form-control-height - @dropdown-arrow-length * 2) / 2 - 1;
+  border-radius: 3px;
+}

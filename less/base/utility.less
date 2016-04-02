@@ -1,0 +1,206 @@
+//
+// Utility classes
+// Syntax: u-<utilityName>
+// --------------------------------------------------
+
+// Margins, Padding, Width, etc...
+// -------------------------
+
+.u-noMargin
+{
+    margin: 0;
+}
+
+.u-mr10
+{
+    margin-right: 10px;
+}
+
+.u-pr0
+{
+    padding-right: 0;
+}
+
+
+@media @xs
+{
+  .u-width100XS
+  {
+      width: 100%;
+  }
+
+  .u-mb10XS
+  {
+      margin-bottom: 10px;
+  }
+
+  .u-pt0XS
+  {
+      padding-top: 0;
+  }
+}
+
+@media @sm
+{
+    .u-width100SM
+    {
+        width: 100%;
+    }
+
+    .u-mb10SM
+    {
+        margin-bottom: 10px;
+    }
+}
+
+// Text: truncate, align, dim, separator, etc...
+// -------------------------
+
+.u-truncateText
+{
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.u-upperCase
+{
+    text-transform: uppercase;
+}
+
+.u-hyphenate
+{
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+
+        word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.u-breakWord
+{
+    word-break: break-all;
+    // Chrome, Safari and other WebKit/Blink browsers also support the unofficial break-word value which is treated like word-wrap: break-word.;
+    word-break: break-word
+}
+
+.u-separator
+{
+    padding: 0 5px;
+}
+
+
+@media @xs
+{
+  .u-textAlignCenterXS 
+  {
+      text-align: center !important;
+  }
+
+  .u-noPaddingXS
+  {
+      padding: 0 !important;
+  }
+
+  .u-textMutedXS
+  {
+      color: @gray-base;
+  }
+
+  .u-mb20XS
+  {
+      margin-bottom: 20px;
+  }
+
+  .u-pullLeftXS
+  {
+      float: left !important;
+  }
+
+  .u-pullRightXS
+  {
+      float: right !important;
+  }
+}
+
+.u-grayscale
+{
+    background-color: #eee;
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+    {
+        color: #999;
+    }
+}
+
+
+
+// Vertical center
+// -------------------------
+
+.u-flexVerticalCenter
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.u-flexCenter
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.u-FlexAlignSelfFlexStart
+{
+    -ms-flex-item-align: start;
+            -webkit-align-self: flex-start;
+            align-self: flex-start;
+}
+
+
+// Cursor
+// -------------------------
+
+.u-cursorPointer
+{
+    cursor: pointer;
+}
+
+
+// Mask
+// -------------------------
+
+.u-mask
+{
+    position: absolute;
+    z-index: @zIndex-9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
