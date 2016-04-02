@@ -1,0 +1,12 @@
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  auto_ids: true
+
+permalink: pretty
+source: docs
+baseurl: ""
+
+github:
+  repo: https://github.com/starandtina/active-share-styles

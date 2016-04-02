@@ -1083,26 +1083,6 @@ input[type='checkbox'] {
 .spinner--large {
   font-size: 24px;
 }
-.datetime-input input {
-  display: inline-block;
-}
-.datetime-input #dateInput {
-  width: 48.5%;
-}
-.datetime-input #timeSelect {
-  width: 48.5%;
-  margin-left: 3%;
-  top: -1px;
-}
-.datetime-input #dateInput[type='date'],
-.datetime-input #timeInput[type='time'] {
-  -webkit-appearance: none;
-  line-height: 1em;
-  width: 100%;
-}
-.datetime-input #dateInput[type='date'] {
-  margin-bottom: 8px;
-}
 .btn-group.open .dropdown-toggle {
   box-shadow: none;
 }

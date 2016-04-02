@@ -1,6 +1,9 @@
 {
   "name": "active-share-styles",
-  "main": "index.js",
+  "main": "dist/css/active.css",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
@@ -14,6 +17,15 @@
   "author": "Khalil Zhang <kandmforever@126.com> (http://starandtina.github.io/)",
   "license": "MIT",
   "devDependencies": {
+    "commitizen": "2.7.6",
+    "cz-conventional-changelog": "1.1.5",
+    "grunt": "0.4.5",
+    "grunt-autoprefixer": "2.2.0",
+    "grunt-build-control": "0.2.2",
+    "grunt-contrib-less": "1.2.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-jekyll": "0.4.4",
+    "grunt-parker": "0.1.6",
     "less": "2.6.1",
     "semantic-release": "^4.3.5"
   },
