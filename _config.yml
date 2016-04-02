@@ -6,7 +6,7 @@ kramdown:
 
 permalink: pretty
 source: docs
-baseurl: ""
+baseurl: "active-share-styles"
 
 github:
   repo: https://github.com/starandtina/active-share-styles
