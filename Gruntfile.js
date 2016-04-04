@@ -1,4 +1,9 @@
 module.exports = function (grunt) {
+  // show elapsed time at the end
+  require('time-grunt')(grunt);
+
+  // load plugins
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     // Project configuration.
@@ -11,7 +16,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/css/active.css': 'lesss/active.less'
+          'dist/css/active.css': 'less/active.less'
         }
       },
       docs: {
@@ -31,7 +36,7 @@ module.exports = function (grunt) {
         ]
       },
       dist: {
-        src: 'css/*.css'
+        src: 'dist/css/*.css'
       },
       docs: {
         src: '_site/*.css'
@@ -58,7 +63,7 @@ module.exports = function (grunt) {
           'TotalImportantKeywords',
           'TotalMediaQueries'
         ],
-        file: "dist/.active-stats.md",
+        file: "dist/.css-stats.md",
         usePackage: true
       },
       src: [
@@ -111,14 +116,6 @@ module.exports = function (grunt) {
       }
     }
   });
-
-  // Load dependencies
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-parker');
-  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Generate and format the CSS
   grunt.registerTask('default', ['less', 'jekyll:dist', 'postcss', 'parker']);
