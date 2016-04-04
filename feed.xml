@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Apr 2016 22:46:36 +0800</pubDate>
-    <lastBuildDate>Sat, 02 Apr 2016 22:46:36 +0800</lastBuildDate>
+    <link>/active-share-styles/</link>
+    <atom:link href="/active-share-styles/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 04 Apr 2016 22:08:09 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Apr 2016 22:08:09 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -27,8 +27,8 @@
 
 </description>
         <pubDate>Sat, 02 Apr 2016 21:44:46 +0800</pubDate>
-        <link>/jekyll/update/2016/04/02/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">/jekyll/update/2016/04/02/welcome-to-jekyll/</guid>
+        <link>/active-share-styles/jekyll/update/2016/04/02/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">/active-share-styles/jekyll/update/2016/04/02/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
